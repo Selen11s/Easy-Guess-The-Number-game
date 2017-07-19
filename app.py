@@ -3,7 +3,7 @@ import random
 from flask import Flask, render_template
 
 app = Flask(__name__)
-guesses =['Netflix', 'Amazon', 'Torrent']
+
 
 @app.route('/')
 def index():
@@ -11,7 +11,7 @@ def index():
 
 @app.route('/guess/int:id')
 def guess(id):
-	return render_template('guess.html' , guess=guesses[id])
+	return render_template('guess.html')
 
 
 if __name__ == '__main__':
