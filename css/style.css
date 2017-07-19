@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
-
 body{
     margin: 0px;
     padding: 0px;
@@ -30,23 +29,42 @@ body{
 }
 
 .button {
-background-color: green; /* Green */
+background-color: green; 
     border: none;
     color: white;
     padding: 16px 32px;
-    text-align: center;
+    text-align: right;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     border-radius: 5px;
     font-weight: bold;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;        
 }
 .button:hover{
     background:red
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
 }
